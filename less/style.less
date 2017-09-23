@@ -1,5 +1,331 @@
 @import "/helpers/_variables.less";
-@import "/helpers/_mixins.less";
 @import "/base/_reset.less";
 @import "/base/_normalize.less";
+@import "/helpers/_mixins.less";
 
+@font-face {
+  font-family: "Raleway Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("../fonts/raleway-regular-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-regular-webfont.woff") format("woff"),
+    url("../fonts/raleway-regular.ttf") format("truetype"),
+    url("../fonts/raleway-regular-webfont.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Raleway Medium";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("../fonts/raleway-medium-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-medium-webfont.woff") format("woff"),
+    url("../fonts/raleway-medium.ttf") format("truetype"),
+    url("../fonts/raleway-medium-webfont.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Raleway SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("../fonts/raleway-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-semibold-webfont.woff") format("woff"),
+    url("../fonts/raleway-semibold.ttf") format("truetype"),
+    url("../fonts/raleway-semibold-webfont.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("../fonts/raleway-bold-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-bold-webfont.woff") format("woff"),
+    url("../fonts/raleway-bold.ttf") format("truetype"),
+    url("../fonts/raleway-bold-webfont.eot") format("eot");
+}
+
+.content-wrapper {
+  .content-wrapper-prop();
+}
+
+.main-page {
+  position: relative;
+}
+
+
+//Header
+
+.page-header {
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  width            : 100%;
+  background-color : rgba(0, 0, 0, 0.1);
+  z-index          : 5;
+}
+
+.page-header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo__title {
+  .heading-prop(@heading-font-family-1, @font-color-1);
+  font-size: 2.125rem;
+  vertical-align: middle;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: @font-color-1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-menu__link {
+  color           : @font-color-1;
+  font-family     : @paragraph-font-family;
+  font-size       : 0.875rem;
+  font-weight     : 300;
+  text-decoration : none;
+  padding         : 15px 0;
+  margin-right    : 29px;
+  text-transform  : capitalize;
+}
+
+.main-menu__item {
+  &:last-child .main-menu__link {
+    margin-right: 0;
+  }
+}
+//---------------------------------------------------------------------------
+
+//Section Intro
+
+.slider {
+  position   : relative;
+  box-sizing : border-box;
+  input[type="radio"] {
+    display : none;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  transform: translateY(-50%);
+}
+
+.slider__left-row {
+    left: 200px;
+    background: red;
+}
+
+.slider__right-arrow {
+    right: 200px;
+    background: green;
+}
+
+.slider_filter {
+  background-color : rgba(0, 0, 0, 0.6);
+  height: inherit;
+}
+
+.slider__inner {
+  overflow: hidden;
+}
+
+.slider__slides {
+  width           : 500%;
+  display         : flex;
+  justify-content : space-between;
+  transition: transform 0.8s ease;
+}
+
+.slider__slide {
+  width: 100%;
+  height : 1024px;
+  position: relative;
+}
+
+.slider__slide-1 {
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.slider__slide-2 {
+  background: url("../img/header-bg-2.jpg") no-repeat;
+  background-size: cover;
+}
+
+.slider__slide-3 {
+  background: url("../img/header-bg-3.jpg") no-repeat;
+  background-size: cover;
+}
+
+.slider__slide-4 {
+  background: url("../img/header-bg-4.jpg") no-repeat;
+  background-size: cover;
+}
+
+.slider__slide-5 {
+  background: url("../img/header-bg-5.jpg") no-repeat;
+  background-size: cover;
+}
+
+.slider__controls {
+  position          : absolute;
+  left              : 50%;
+  bottom            : 300px;
+  z-index: 4;
+  -webkit-transform : translateX(-50%);
+  -moz-transform    : translateX(-50%);
+  -ms-transform     : translateX(-50%);
+  -o-transform      : translateX(-50%);
+  transform         : translateX(-50%);
+  label {
+    display          : inline-block;
+    width            : 11px;
+    height           : 11px;
+    margin           : 5px;
+    background-color : #cccccc;
+    border-radius    : 50%;
+    cursor           : pointer;
+  }
+}
+
+#toggle-one:checked ~ .slider__controls label[for="toggle-one"],
+#toggle-two:checked ~ .slider__controls label[for="toggle-two"],
+#toggle-three:checked ~ .slider__controls label[for="toggle-three"],
+#toggle-four:checked ~ .slider__controls label[for="toggle-four"],
+#toggle-five:checked ~ .slider__controls label[for="toggle-five"] {
+  border           : solid 2px @border-color;
+  background-color : transparent;
+}
+
+#toggle-one:checked ~ .slider__inner .slider__slides {
+  -webkit-transform : translate(0);
+  -moz-transform    : translate(0);
+  -ms-transform     : translate(0);
+  -o-transform      : translate(0);
+  transform         : translate(0);
+}
+
+#toggle-two:checked ~ .slider__inner .slider__slides {
+  -webkit-transform:  translateX(-20%);
+  -moz-transform:     translateX(-20%);
+  -ms-transform:      translateX(-20%);
+  -o-transform:       translateX(-20%);
+  transform:          translateX(-20%);
+}
+
+#toggle-three:checked ~ .slider__inner .slider__slides {
+  -webkit-transform:  translateX(-40%);
+  -moz-transform:     translateX(-40%);
+  -ms-transform:      translateX(-40%);
+  -o-transform:       translateX(-40%);
+  transform:          translateX(-40%);
+}
+
+#toggle-four:checked ~ .slider__inner .slider__slides {
+  -webkit-transform : translateX(-60%);
+  -moz-transform    : translateX(-60%);
+  -ms-transform     : translateX(-60%);
+  -o-transform      : translateX(-60%);
+  transform         : translateX(-60%);
+}
+
+#toggle-five:checked ~ .slider__inner .slider__slides {
+  -webkit-transform : translateX(-80%);
+  -moz-transform    : translateX(-80%);
+  -ms-transform     : translateX(-80%);
+  -o-transform      : translateX(-80%);
+  transform         : translateX(-80%);
+}
+
+.slider__content {
+  display           : flex;
+  flex-direction    : column;
+  align-items       : center;
+  max-width         : 760px;
+  position          : absolute;
+  top               : 50%;
+  left              : 50%;
+  -webkit-transform : translate(-50%, -50%);
+  -moz-transform    : translate(-50%, -50%);
+  -ms-transform     : translate(-50%, -50%);
+  -o-transform      : translate(-50%, -50%);
+  transform         : translate(-50%, -50%);
+  z-index           : 3;
+}
+
+.intro-slider__main-heading {
+  font-family    : @heading-font-family-3;
+  color          : @font-color-1;
+  font-size      : 3.25rem;
+  text-align     : center;
+  text-transform : capitalize;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.intro-slider__second-heading {
+  order          : -1;
+  font-family    : @heading-font-family-2;
+  color          : @font-color-1;
+  font-size      : 2.25rem;
+  text-align     : center;
+  text-transform : capitalize;
+  line-height: 1;
+  margin: 0;
+}
+
+.intro__second-heading_small-letters-word {
+  text-transform : lowercase;
+}
+
+.intro-slider__text {
+  font-family : @paragraph-font-family;
+  font-size   : 1rem;
+  color       : @font-color-1;
+  font-weight : 300;
+  line-height : 1.5;
+  text-align  : center;
+  margin      : 5px 0 47px;
+  padding     : 0 30px;
+}
+
+.intro-slider__button {
+  background-color : @bg-color-1;
+  color            : @font-color-1;
+  font-family      : @heading-font-family-3;
+  padding          : 17px 39px;
+  border-radius    : 3px;
+  box-shadow       : 0 2px 0 0 @bg-color-2;
+  text-transform   : uppercase;
+  text-decoration  : none;
+  font-size: 0.875rem;
+}
+//-----------------------------------------------------------------------------------
