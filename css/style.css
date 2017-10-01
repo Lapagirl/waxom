@@ -461,7 +461,7 @@ textarea:active {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
 .page-header__content {
@@ -507,8 +507,26 @@ textarea:active {
 .main-menu__link:hover {
   color: #c7b29a;
 }
-.main-menu__item:last-child .main-menu__link {
-  margin-right: 0;
+.search {
+  background-color: transparent;
+  border: none;
+}
+.basket,
+.search {
+  margin-left: 28px;
+}
+.basket {
+  position: relative;
+  display: inline-block;
+  padding: 15px 0;
+}
+.basket::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .slider {
   position: relative;
@@ -527,11 +545,9 @@ textarea:active {
 }
 .slider__left-arrow {
   left: 200px;
-  background: red;
 }
 .slider__right-arrow {
   right: 200px;
-  background: green;
 }
 .slider_filter {
   background-color: rgba(0, 0, 0, 0.6);
@@ -590,6 +606,7 @@ textarea:active {
   background-color: #cccccc;
   border-radius: 50%;
   cursor: pointer;
+  vertical-align: middle;
 }
 #toggle-one:checked ~ .slider__controls label[for="toggle-one"],
 #toggle-two:checked ~ .slider__controls label[for="toggle-two"],
@@ -886,6 +903,150 @@ textarea:active {
   max-width: 757px;
   margin: auto;
 }
-.projects-block__fiter-controls {
+.projects-block__filter-controls {
   text-align: center;
+  margin: 40px 0;
+}
+.projects-block__filter-button {
+  padding: 10px 25px;
+  background-color: white;
+  border: solid 1px #ebebeb;
+  border-radius: 3px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #8c8c8c;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+}
+.projects-block__filter-button:hover {
+  background-color: #998675;
+  border-color: #998675;
+  color: #fff;
+}
+.projects-block__projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects-block__project-item {
+  margin-bottom: 30px;
+}
+.projects-block__project-item:hover .overlay-wrapper__overlay {
+  display: block;
+}
+.projects-block__project-item:hover .projects-block__description-container {
+  background-color: #362f2d;
+}
+.projects-block__project-item:hover .projects-block__description-container::before {
+  border-bottom-color: #362f2d;
+}
+.projects-block__project-item:hover .projects-block__project-heading {
+  color: #fff;
+}
+.projects-block__project-item:hover .projects-block__project-text {
+  color: #c7b299;
+}
+.overlay-wrapper {
+  position: relative;
+}
+.overlay-wrapper__overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.overlay-wrapper__link {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: red;
+  top: 106px;
+  left: 144px;
+  cursor: pointer;
+  border: none;
+}
+.overlay-wrapper__link:focus {
+  outline: none;
+}
+.overlay-wrapper__zoom {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: green;
+  top: 106px;
+  right: 144px;
+  cursor: pointer;
+  border: none;
+}
+.overlay-wrapper__zoom:focus {
+  outline: none;
+}
+.projects-block__project-image {
+  display: block;
+}
+.projects-block__link {
+  text-decoration: none;
+}
+.projects-block__description-container {
+  background-color: #fbfaf8;
+  padding: 27px 30px;
+  position: relative;
+}
+.projects-block__description-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 28px;
+  width: 0;
+  height: 0;
+  border: solid 10px transparent;
+  border-bottom-color: #fbfaf8;
+}
+.projects-block__project-heading {
+  font-family: "Raleway SemiBold", "Arial", sans-serif;
+  color: #c7b29a;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+.projects-block__project-text {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #d1d1d1;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.429;
+}
+.center {
+  text-align: center;
+}
+.projects-block__load-more {
+  background-color: #998675;
+  color: #fff;
+  font-family: "Raleway Bold", "Arial", sans-serif;
+  padding: 17px 39px;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 #736357;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  font-size: 0.875rem;
+}
+.projects-block__load-more:hover {
+  background-color: #7e6d5d;
+  border-color: #998675;
+}
+.projects-block__load-more:active {
+  box-shadow: inset -2px 2px 0 0 #736357;
+  border-color: #998675;
+}
+.projects-block__load-more:focus {
+  outline: none;
 }

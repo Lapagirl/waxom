@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d689a4fc-df08-42a9-9a03-df6a2dd81be2" name="waxom.ru.recolon.ru" url="http://waxom.ru.recolon.ru">
+        <fileTransfer host="waxom.ru.recolon.ru" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

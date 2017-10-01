@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Waxom</title>
@@ -31,8 +32,20 @@
                             <!--<img src="img/purchase-icon.png" alt="purchase-icon" width="18" height="24" >-->
                         <!--</object>-->
                     <!--</a>-->
+                    <!--<a class="basket" href="#">-->
+                        <!--<object type="image/svg+xml" data="svg/purchase-icon.svg" width="18" height="24">-->
+                            <!--<img src="img/purchase-icon.png" alt="purchase-icon" width="18" height="24" >-->
+                        <!--</object>-->
+                    <!--</a>-->
+                    <a href="#">
+                        <svg width="18" height="24">
+                            <use xlink:href="svg/sprite.svg#purchase-icon"></use>
+                        </svg>
+                    </a>
+
+                    <!--Переделать поиск на форму-->
                     <button class="search" type="button">
-                        <object type="image/svg+xml" data="svg/sprite.svg#search-icon" width="18" height="24">
+                        <object type="image/svg+xml" data="svg/search-icon.svg" width="18" height="24">
                             <img src="img/search-icon.png" alt="search-icon" width="24" height="24">
                         </object>
                     </button>
@@ -43,16 +56,28 @@
         <section class="intro">
             <div class="slider">
                 <div class="slider_filter">
-                    <!--<div class="slider__arrow slider__left-arrow">-->
-                        <!--<object type="image/svg+xml" data="svg/sprite.svg#slider-arrow-left" width="40" height="73">-->
-                            <!--&lt;!&ndash;вставить png&ndash;&gt;-->
-                        <!--</object>-->
-                    <!--</div>-->
+                    <div class="slider__arrow slider__left-arrow">
+                        <object type="image/svg+xml" data="svg/sprite.svg#slider-arrow-left" width="40" height="73">
+                            <!--вставить png-->
+                        </object>
+                    </div>
                     <!--<div class="slider__arrow slider__right-arrow">-->
                         <!--<object type="image/svg+xml" data="svg/sprite.svg#slider-arrow-right" width="40" height="73">-->
                             <!--&lt;!&ndash;вставить png&ndash;&gt;-->
                         <!--</object>-->
                     <!--</div>-->
+
+                    <div class="slider__arrow slider__left-arrow">
+                    <object type="image/svg+xml" data="svg/slider-arrow-left.svg" width="40" height="73">
+                    <!--вставить png-->
+                    </object>
+                    </div>
+
+                    <div class="slider__arrow slider__right-arrow">
+                        <object type="image/svg+xml" data="svg/slider-arrow-right.svg" width="40" height="73">
+                            <!--вставить png-->
+                        </object>
+                    </div>
 
                     <input type="radio" name="toggle" id="toggle-one" checked>
                     <input type="radio" name="toggle" id="toggle-two">
@@ -185,7 +210,7 @@
                 <h2 class="projects__heading">Our latest projects.</h2>
                 <p class="projects__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
                 <div class="projects-block">
-                    <div class="projects-block__fiter-controls">
+                    <div class="projects-block__filter-controls">
                         <button class="projects-block__filter-button projects-block__filter-button-1">All</button>
                         <button class="projects-block__filter-button projects-block__filter-button-2">Web design</button>
                         <button class="projects-block__filter-button projects-block__filter-button-3">Mobile App</button>
@@ -194,47 +219,98 @@
                     </div>
                     <div class="projects-block__projects-list">
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-1.jpg" alt="Project-1" width="370" height="237">
-                            <div>
-                                <h1>Claritas Etiam Processus</h1>
-                                <span>Photography, Nature</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-1.jpg" alt="Project-1" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Claritas Etiam Processus</h1>
+                                    <span class="projects-block__project-text">Photography, Nature</span>
+                                </div>
+                            </a>
                         </article>
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-2.jpg" alt="Project-2" width="370" height="237">
-                            <div>
-                                <h1>Quam Nutamus Farum</h1>
-                                <span>Graphic Design, Mock-Up</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-2.jpg" alt="Project-2" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Quam nutamus farum</h1>
+                                    <span class="projects-block__project-text">Graphic Design, Mock-Up</span>
+                                </div>
+                            </a>
                         </article>
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-3.jpg" alt="Project-3" width="370" height="237">
-                            <div>
-                                <h1>Usus Legentis Videntur</h1>
-                                <span>Photography, Holiday</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-3.jpg" alt="Project-3" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Usus legentis videntur</h1>
+                                    <span class="projects-block__project-text">Photography, Holiday</span>
+                                </div>
+                            </a>
                         </article>
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-4.jpg" alt="Project-4" width="370" height="237">
-                            <div>
-                                <h1>Claritas Etiam Processus</h1>
-                                <span>Photography, Nature</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-4.jpg" alt="Project-4" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Claritas etiam processus</h1>
+                                    <span class="projects-block__project-text">Photography, Nature</span>
+                                </div>
+                            </a>
                         </article>
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-5.jpg" alt="Project-5" width="370" height="237">
-                            <div>
-                                <h1>Quam Nutamus Farum</h1>
-                                <span>Graphic Design, Mock-Up</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-5.jpg" alt="Project-5" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Quam nutamus farum</h1>
+                                    <span class="projects-block__project-text">Graphic Design, Mock-Up</span>
+                                </div>
+                            </a>
                         </article>
                         <article class="projects-block__project-item">
-                            <img src="img/project-img-6.jpg" alt="Project-6" width="370" height="237">
-                            <div>
-                                <h1>Usus Legentis Videntur</h1>
-                                <span>Photography, Holiday</span>
+                            <div class="overlay-wrapper">
+                                <div class="overlay-wrapper__overlay">
+                                    <button class="overlay-wrapper__link"></button>
+                                    <button class="overlay-wrapper__zoom"></button>
+                                </div>
+                                <img class="projects-block__project-image" src="img/project-img-6.jpg" alt="Project-6" width="370" height="237">
                             </div>
+                            <a class="projects-block__link" href="#">
+                                <div class="projects-block__description-container">
+                                    <h1 class="projects-block__project-heading">Usus legentis videntur</h1>
+                                    <span class="projects-block__project-text">Photography, Holiday</span>
+                                </div>
+                            </a>
                         </article>
+                    </div>
+                    <div class="center">
+                        <button class="projects-block__load-more">Load more</button>
                     </div>
                 </div>
             </div>
