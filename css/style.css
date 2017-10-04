@@ -802,10 +802,13 @@ label[for="search-radio-opened"] {
 }
 .services__item {
   text-align: center;
-  padding: 79px 0 69px;
+  padding: 38px 0 0;
 }
 .services__item + .services__item {
   margin-left: 30px;
+}
+.services__item:hover .services__icon-svg {
+  fill: #c7b299;
 }
 .services__item:hover .services__heading {
   color: #c7b299;
@@ -813,8 +816,12 @@ label[for="search-radio-opened"] {
 .services__item:hover .services__description::after {
   background-color: #c7b299;
 }
+.services__icon-svg {
+  fill: #555555;
+}
 .services__description {
   position: relative;
+  padding-bottom: 58px;
 }
 .services__description::after {
   content: "";
@@ -822,8 +829,8 @@ label[for="search-radio-opened"] {
   position: absolute;
   width: 70px;
   height: 3px;
-  background-color: #fbfaf8;
-  bottom: -25px;
+  background-color: #f1eee9;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -836,7 +843,7 @@ label[for="search-radio-opened"] {
   color: #555555;
   font-size: 1.375rem;
   text-transform: capitalize;
-  margin-bottom: 0;
+  margin: 23px 0 0;
 }
 .services__text {
   font-family: "Montserrat", "Arial", sans-serif;
