@@ -862,7 +862,7 @@ label[for="search-radio-opened"] {
   font-size: 1.875rem;
   text-align: center;
   text-transform: capitalize;
-  margin-bottom: 0;
+  margin: 38px 0 0;
 }
 .services-and-ideas__text {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -878,7 +878,7 @@ label[for="search-radio-opened"] {
   position: relative;
   height: 482px;
   max-width: 1230px;
-  margin: 0 auto;
+  margin: -3px auto 0;
 }
 .screenshots__screenshot-item {
   position: absolute;
@@ -948,7 +948,7 @@ label[for="search-radio-opened"] {
   background-color: #998675;
   color: #fff;
   font-family: "Raleway Bold", "Arial", sans-serif;
-  padding: 17px 39px;
+  padding: 17px 29px;
   border-radius: 3px;
   box-shadow: 0 2px 0 0 #736357;
   text-transform: uppercase;
