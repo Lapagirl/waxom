@@ -485,6 +485,7 @@ textarea:active {
   align-items: center;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 .main-menu__list {
   margin: 0;
@@ -507,26 +508,86 @@ textarea:active {
 .main-menu__link:hover {
   color: #c7b29a;
 }
-.search {
-  background-color: transparent;
-  border: none;
+.main-menu__item:last-of-type .main-menu__link {
+  margin-right: 0;
 }
-.basket,
-.search {
+.purchase-icon-link {
   margin-left: 28px;
 }
-.basket {
-  position: relative;
-  display: inline-block;
-  padding: 15px 0;
+.purchase-icon-link:hover .purchase-icon-svg {
+  fill: #c7b299;
 }
-.basket::after {
-  content: "";
+.purchase-icon-svg,
+.search-request-icon-svg {
+  fill: #fff;
+  margin-left: 28px;
+}
+#search-radio-closed,
+#search-radio-opened,
+label[for="search-radio-opened"] {
+  display: none;
+}
+#search-radio-closed {
+  margin-left: 50px;
+}
+#search-radio-closed:hover ~ label[for="search-radio-closed"] .search-request-icon-svg {
+  fill: #c7b299;
+}
+#search-radio-closed:checked ~ #search-request {
+  display: block;
+  animation: searchAppearance .5s ease forwards;
+}
+#search-radio-closed:checked ~ label[for="search-radio-closed"] {
+  display: none;
+}
+#search-radio-closed:checked ~ label[for="search-radio-opened"] {
+  display: block;
+}
+#search-radio-opened {
+  margin-left: 50px;
+}
+#search-radio-opened:hover ~ label[for="search-radio-opened"] .search-request-icon-svg {
+  fill: #c7b299;
+}
+#search-radio-opened:checked ~ #search-request {
+  animation: searchHiding .5s ease forwards;
+}
+#search-radio-opened:checked ~ label[for="search-radio-closed"] {
+  display: block;
+}
+#search-radio-opened:checked ~ label[for="search-radio-opened"] {
+  display: none;
+}
+#search-request {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 12px;
+  right: 40px;
+  width: 0;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+@keyframes searchAppearance {
+  from {
+    width: 0;
+  }
+  to {
+    width: 730px;
+  }
+}
+@keyframes searchHiding {
+  from {
+    width: 730px;
+    display: block;
+  }
+  95% {
+    width: 0;
+    display: block;
+  }
+  to {
+    display: none;
+  }
 }
 .slider {
   position: relative;
@@ -538,10 +599,17 @@ textarea:active {
 .slider__arrow {
   position: absolute;
   top: 50%;
-  width: 50px;
-  height: 50px;
   z-index: 5;
   transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  fill: #8c8c8c;
+}
+.slider__arrow:hover {
+  fill: #d3c1ad;
+}
+.slider__arrow:focus {
+  outline: none;
 }
 .slider__left-arrow {
   left: 200px;
@@ -924,6 +992,9 @@ textarea:active {
   border-color: #998675;
   color: #fff;
 }
+.projects-block__filter-button:focus {
+  outline: none;
+}
 .projects-block__projects-list {
   display: flex;
   flex-wrap: wrap;
@@ -1049,4 +1120,72 @@ textarea:active {
 }
 .projects-block__load-more:focus {
   outline: none;
+}
+.video-presentation {
+  width: auto;
+  height: 100%;
+  max-height: 705px;
+  position: relative;
+}
+.video-container {
+  width: 100%;
+  height: 705px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.mobile {
+  background-color: #fbfaf8;
+}
+.mobile .content-wrapper {
+  padding-bottom: 0;
+}
+.image-and-content-group {
+  display: flex;
+  justify-content: center;
+}
+.content-group {
+  width: 55%;
+}
+.content-group__heading {
+  font-family: "Raleway SemiBold", "Arial", sans-serif;
+  color: #555555;
+  font-size: 1.875rem;
+  text-transform: capitalize;
+}
+.content-group__text,
+.content-group__list {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #8c8c8c;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+.content-group__list {
+  line-height: 2;
+}
+.counters {
+  background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+/*#counters-clients-icon {
+    fill: green;
+  }*/
+.counters-clients-icon {
+  fill: red;
+}
+.counters-clients-icon:hover {
+  fill: yellow;
 }
