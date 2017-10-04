@@ -1246,3 +1246,48 @@ label[for="search-radio-opened"] {
   background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
   background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
 }
+.figure-container {
+  display: flex;
+  justify-content: center;
+}
+.counter-figure {
+  text-align: center;
+  width: 174px;
+  margin-top: 30px;
+  position: relative;
+}
+.counter-figure + .counter-figure {
+  margin-left: 26px;
+}
+.counter-figure::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  bottom: 20px;
+  left: 73px;
+}
+.counter-icon-svg {
+  fill: #c7b299;
+}
+.counter-figure__num {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 0.75;
+  margin: 23px 0 15px;
+}
+.counter-figure__description {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #c7b299;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.429;
+  text-transform: uppercase;
+  margin-bottom: 47px;
+}
