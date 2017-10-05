@@ -1185,7 +1185,6 @@ label[for="search-radio-opened"] {
   top: 21px;
   left: 23px;
   width: 50px;
-  //border: 1px solid red;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -1274,7 +1273,7 @@ label[for="search-radio-opened"] {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 140px 0;
+  padding: 140px 0 134px;
 }
 
 .partners__link {
@@ -1283,4 +1282,205 @@ label[for="search-radio-opened"] {
 
 .partners__item:hover .partners__logo {
   filter: sepia(100%);
+}
+
+//footer
+
+footer {
+  background-color: @bg-color-11;
+  p {
+    font-family: @paragraph-font-family;
+    color: @font-color-8;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.714;
+    margin: 0;
+  }
+}
+
+.theme__group {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.about,
+.recent-posts-section,
+.twitter-posts-section,
+.widget-section {
+  width: 24%;
+}
+
+.logo-margin-bottom {
+  margin-bottom: 25px;
+}
+
+.footer-heading {
+  color: @font-color-1;
+  font-family: @heading-font-family-3;
+  font-size: 1.5rem;
+  margin: 24px 0 25px;
+}
+
+.about__read-more {
+  font-family: @paragraph-font-family;
+  color: @font-color-7;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.429;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  text-transform: capitalize;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    border-left-color: inherit;
+  }
+  &:hover {
+    color: @font-color-3;
+    &::after {
+      border-left-color: inherit;
+    }
+  }
+}
+
+.recent-post__link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  & + .recent-post__link::before {
+    .content-item-line;
+    top: -10px;
+    left: 0;
+    background-color: @bg-color-9;
+  }
+  &:hover {
+    .pub-date {
+      color: @font-color-1;
+    }
+    p {
+      color: @font-color-3;
+    }
+  }
+}
+
+.recent-post {
+  margin-bottom: 20px;
+}
+
+.pub-date {
+  color: @bg-color-8;
+  font-family: @paragraph-font-family;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.667;
+}
+
+.twitter-post__item {
+  position: relative;
+  margin-top: 20px;
+  & + .twitter-post__item::before {
+      .content-item-line;
+      top: -10px;
+      left: 0;
+      background-color: @bg-color-9;
+    }
+}
+
+.twitter-post__tag {
+  font-family: @paragraph-font-family;
+  color: @font-color-9;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.429;
+  text-decoration: none;
+  &:hover {
+    color: lighten(@font-color-9, 30%);
+  }
+}
+
+.twitter-post__external-link {
+  font-family : @paragraph-font-family;
+  color       : @font-color-10;
+  font-size   : 0.875rem;
+  font-weight : 300;
+  line-height : 1.429;
+  text-decoration: none;
+  &:hover {
+    color: lighten(@font-color-10, 20%);
+  }
+}
+
+.widget__img-group {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.widget__img {
+  display: block;
+  margin-bottom: 8px;
+  &:nth-child(odd) {
+    margin-right: 8px;
+  }
+  &:hover {
+    filter : sepia(30%);
+  }
+}
+
+.copy-and-links {
+  background-color: @bg-color-12;
+}
+
+.copy-and-links__group {
+  color: @font-color-8;
+  font-family: @paragraph-font-family;
+  font-size: 0.813rem;
+  font-weight: 300;
+  line-height: 1.538;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.brand-color-mark {
+  color: @font-color-10;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color:@font-color-3;
+  }
+}
+
+.copy-and-links__left-part,
+.copy-and-links__right-part {
+  display: flex;
+  & li + li::before {
+    content: " | ";
+    color: @font-color-11;
+    padding: 0 8px 0 13px;
+  }
+}
+
+.copy-and-links__left-part {
+  justify-content: flex-start;
+}
+
+.copy-and-links__right-part {
+  justify-content: flex-end;
 }

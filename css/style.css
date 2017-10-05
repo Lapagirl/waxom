@@ -421,6 +421,12 @@ input:active,
 textarea:active {
   outline: none;
 }
+.content-item-line {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+}
 @font-face {
   font-family: "Raleway Regular";
   font-style: normal;
@@ -1484,11 +1490,194 @@ label[for="search-radio-opened"] {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 140px 0;
+  padding: 140px 0 134px;
 }
 .partners__link {
   text-decoration: none;
 }
 .partners__item:hover .partners__logo {
   filter: sepia(100%);
+}
+footer {
+  background-color: #191919;
+}
+footer p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #545454;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.714;
+  margin: 0;
+}
+.theme__group {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+.about,
+.recent-posts-section,
+.twitter-posts-section,
+.widget-section {
+  width: 24%;
+}
+.logo-margin-bottom {
+  margin-bottom: 25px;
+}
+.footer-heading {
+  color: #fff;
+  font-family: "Raleway Bold", "Arial", sans-serif;
+  font-size: 1.5rem;
+  margin: 24px 0 25px;
+}
+.about__read-more {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #d1d1d1;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.429;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  text-transform: capitalize;
+}
+.about__read-more::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  border-left-color: inherit;
+}
+.about__read-more:hover {
+  color: #c7b299;
+}
+.about__read-more:hover::after {
+  border-left-color: inherit;
+}
+.recent-post__link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+.recent-post__link + .recent-post__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: -10px;
+  left: 0;
+  background-color: #252525;
+}
+.recent-post__link:hover .pub-date {
+  color: #fff;
+}
+.recent-post__link:hover p {
+  color: #c7b299;
+}
+.recent-post {
+  margin-bottom: 20px;
+}
+.pub-date {
+  color: #363636;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.667;
+}
+.twitter-post__item {
+  position: relative;
+  margin-top: 20px;
+}
+.twitter-post__item + .twitter-post__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: -10px;
+  left: 0;
+  background-color: #252525;
+}
+.twitter-post__tag {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #00bff3;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.429;
+  text-decoration: none;
+}
+.twitter-post__tag:hover {
+  color: #8de7ff;
+}
+.twitter-post__external-link {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #959595;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.429;
+  text-decoration: none;
+}
+.twitter-post__external-link:hover {
+  color: #c8c8c8;
+}
+.widget__img-group {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.widget__img {
+  display: block;
+  margin-bottom: 8px;
+}
+.widget__img:nth-child(odd) {
+  margin-right: 8px;
+}
+.widget__img:hover {
+  filter: sepia(30%);
+}
+.copy-and-links {
+  background-color: #111111;
+}
+.copy-and-links__group {
+  color: #545454;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  line-height: 1.538;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+.brand-color-mark {
+  color: #959595;
+}
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-link:hover {
+  color: #c7b299;
+}
+.copy-and-links__left-part,
+.copy-and-links__right-part {
+  display: flex;
+}
+.copy-and-links__left-part li + li::before,
+.copy-and-links__right-part li + li::before {
+  content: " | ";
+  color: #242424;
+  padding: 0 8px 0 13px;
+}
+.copy-and-links__left-part {
+  justify-content: flex-start;
+}
+.copy-and-links__right-part {
+  justify-content: flex-end;
 }
