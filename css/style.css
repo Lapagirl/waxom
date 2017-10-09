@@ -2140,9 +2140,6 @@ footer p {
   .purchase {
     display: none;
   }
-  .projects-block__project-item {
-    width: 100%;
-  }
   .projects-block__filter-controls {
     margin: 34px 0 34px;
   }
@@ -2161,8 +2158,13 @@ footer p {
     border: solid 1px #ebebeb;
     color: #8c8c8c;
   }
+  .projects-block__projects-list {
+    justify-content: center;
+  }
   .projects-block__project-item {
     margin-bottom: 32px;
+    width: 100%;
+    max-width: 370px;
   }
   .projects-block__project-item:hover .overlay-wrapper__overlay {
     display: none;
@@ -2240,9 +2242,15 @@ footer p {
   .posts-slider__slide-2 {
     display: none;
   }
-  .posts-slider__slider-slides,
+  .posts-slider__slider-slides {
+    width: 100%;
+  }
+  .posts-slider__slide-1 {
+    justify-content: center;
+  }
   .post {
     width: 100%;
+    max-width: 370px;
   }
   .post {
     margin-bottom: 10px;
@@ -2278,8 +2286,12 @@ footer p {
   .partners__link {
     width: 35%;
   }
+  .partners__link:first-child,
+  .partners__link:nth-child(2) {
+    margin-bottom: 30px;
+  }
   .partners__logo {
-    width: 100%;
+    background-size: 70%;
     height: auto;
   }
   .theme__group {
