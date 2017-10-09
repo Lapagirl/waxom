@@ -17,6 +17,12 @@
                     <img class="logo__image" src="img/logo.png" alt="logo" width="64" height="56">
                     <span class="logo__title">Waxom</span>
                 </a>
+
+
+                <input type="checkbox" id="main-menu">
+                <label for="main-menu">
+                    <span class="main-menu__menu-icon"></span>
+                </label>
                 <nav class="main-menu">
                     <ul class="main-menu__list">
                         <li class="main-menu__item"><a class="main-menu__link" href="#">Home</a></li>
@@ -38,7 +44,7 @@
                     <form name="search" method="post">
                         <input type="radio" name="search-radio" id="search-radio-closed">
                         <input type="radio" name="search-radio" id="search-radio-opened">
-                        <input class="search-input" type="search" name="search" id="search-request">
+                        <input class="search-input" type="search" name="search" id="search-request" autofocus tabindex="1">
                         <label for="search-radio-closed">
                             <svg class="search-request-icon-svg" width="24" height="24">
                                 <use xlink:href="svg/sprite.svg#search-icon"></use>
@@ -181,7 +187,7 @@
                     </figure>
                 </div>
             </section>
-            <div class="content-wrapper">
+            <div class="content-wrapper services-and-ideas__heading-and-description-group">
                 <h2 class="services-and-ideas__heading">Waxom <span class="small-letters-word">is</span> realization <span class="small-letters-word">of your</span> ideas.</h2>
                 <p class="services-and-ideas__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
             </div>
@@ -362,22 +368,35 @@
             </div>
         </section>
 
-        <!--<section class="video-presentation">-->
-            <!--<div class="video-container">-->
-                <!--<video width="100%" height="auto" preload="auto" poster="video/video-presentation-poster.jpg">-->
-                    <!--<source src="video/674118136.mp4" type="video/mp4">-->
-                <!--</video>-->
-                <!--&lt;!&ndash;<div class="overlay"></div>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</section>-->
+        <section class="presentation">
+            <div class="video-container">
+                <video class="video-presentation" width="100%" height="auto" preload="none" poster="video/video-presentation-poster.jpg">
+                    <source src="video/674118136.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+                <div class="video-container__video-descripton">
+                    <button class="video-container__play-button">
+                        <svg class="video-container__play-button-icon-svg" width="70" height="70">
+                            <use xlink:href="svg/sprite.svg#play-icon"></use>
+                        </svg>
+                    </button>
+                    <h2 class="video-container__heading">Waxom video presentation</h2>
+                    <p class="video-container__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+                    <span class="video-container__video-duration">03:26</span>
+                </div>
+            </div>
+        </section>
 
         <section class="mobile">
             <div class="content-wrapper">
-                <div class="image-and-content-group">
+                <div class="image-and-content-group clearfix">
+                    <div class="content-group content-group-1">
+                        <h2 class="content-group-1__heading">Excelent <span class="small-letters-word">for</span> mobile devices.</h2>
+                        <p class="content-group-1__text">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                    </div>
                     <img class="image-and-content-group__img" src="img/hand-phone.png" alt="Телефон" width="423" height="616">
-                    <div class="content-group">
-                        <h2 class="content-group__heading">Excelent <span class="small-letters-word">for</span> mobile devices.</h2>
-                        <p class="content-group__text">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+
+                    <div class="content-group content-group-2">
                         <details class="mobile-details">
                             <summary class="mobile-details__summary">
                                 Nam liber tempor cum soluta nobis eleifend option;
