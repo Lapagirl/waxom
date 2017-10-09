@@ -86,7 +86,7 @@
 .page-header__content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
 }
 
@@ -94,6 +94,8 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  align-self: flex-start;
+
 }
 
 .logo__title {
@@ -182,6 +184,7 @@ label[for="main-menu"] {
 
 input[id="main-menu"]:checked ~ .main-menu {
   display: flex;
+  height: auto;
 }
 
 input[id="main-menu"]:checked ~ label[for="main-menu"] .main-menu__menu-icon {
@@ -308,7 +311,7 @@ label[for="search-radio-opened"] {
 
 #search-request {
   position: absolute;
-  top: 12px;
+  top: 0;
   right: 40px;
   width: 0;
   height: 30px;
@@ -1698,7 +1701,8 @@ footer {
 
   .main-menu {
     display: none;
-    width: 900px;
+    height: 0;
+    width: 100%;
     flex-direction: column;
     align-items: flex-end;
   }
@@ -1725,7 +1729,6 @@ footer {
     right: 40px;
     width: 0;
   }
-
 
   @keyframes searchAppearance {
     from {
@@ -1835,6 +1838,10 @@ footer {
     text-align: center;
   }
 
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   .theme__group {
     flex-wrap: wrap;
   }
@@ -1882,7 +1889,6 @@ footer {
     }
 
   }
-
 
   .screenshots {
     position : static;
@@ -2013,6 +2019,11 @@ footer {
 //Версия для мобильных
 
 @media screen and (max-width: 767px) {
+  .page-header {
+    position         : absolute;
+    background-color : rgba(0, 0, 0, 0.9);
+  }
+
   .intro {
     display: none;
   }
@@ -2063,7 +2074,8 @@ footer {
     &:nth-child(even) {
       margin-left: 5px;
     }
-    &:hover {
+    &:hover,
+    &:active {
       background-color: white;
       border: solid 1px #ebebeb;
       color: @font-color-2;
@@ -2271,6 +2283,7 @@ footer {
     font-size   : 0.59rem;
     font-weight : 300;
     line-height : 1.4;
+    display: block;
   }
 
   .copy-and-links__left-part,
