@@ -593,6 +593,12 @@ label[for="search-radio-opened"] {
   background-color: #fff;
 }
 
+.services-and-ideas__section-heading,
+.services__section-heading {
+  visibility: hidden;
+  font-size: 0;
+}
+
 .services__list {
   display         : flex;
   justify-content : space-between;
@@ -1199,6 +1205,11 @@ label[for="search-radio-opened"] {
   background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
 }
 
+.counters__heading {
+  visibility: hidden;
+  font-size: 0;
+}
+
 .figure-container {
   display: flex;
   justify-content: center;
@@ -1464,6 +1475,11 @@ label[for="search-radio-opened"] {
   z-index: 1;
 }
 
+.partners__heading {
+  visibility: hidden;
+  font-size: 0;
+}
+
 .partners__list {
   display: flex;
   justify-content: space-around;
@@ -1517,6 +1533,11 @@ footer {
   margin: 24px 0 25px;
 }
 
+.about__heading {
+  visibility: hidden;
+  font-size: 0;
+}
+
 .about__read-more {
   font-family: @paragraph-font-family;
   color: @font-color-7;
@@ -1545,6 +1566,11 @@ footer {
       border-left-color: inherit;
     }
   }
+}
+
+.recent-posts__heading {
+  visibility: hidden;
+  font-size: 0;
 }
 
 .recent-post__link {
@@ -1577,6 +1603,11 @@ footer {
   font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.667;
+}
+
+.twitter-post__heading {
+  visibility: hidden;
+  font-size: 0;
 }
 
 .twitter-post__item {
@@ -2109,11 +2140,18 @@ footer {
   .video-container {
     overflow: hidden;
     margin: 0 auto;
+    width: 100%;
   }
-  .video-presentation {
+/*  .video-presentation {
     height: 400px;
     width: auto;
     margin: auto;
+  }*/
+
+  .video-presentation {
+    //height : auto;
+    //width  : 100%;
+    margin : auto;
   }
 
   .video-container__heading {
